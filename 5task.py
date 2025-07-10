@@ -85,9 +85,10 @@ def main():
         'Тайный побег',
         'Ледяной выстрел',
         'Огненный заряд'
-    ]   
-
-    os.makedirs('results')
+    ]  
+    
+    path='results'
+    os.makedirs(path,mode=0o777, exist_ok=True)
     for i in range(1,11):
         sample_skills = random.sample(skills,3)
         runic_skills = []
